@@ -39,6 +39,7 @@ def movie(id):
     '''
     movie = get_movie(id)
     title = f'{movie.title}'
+    reviews = Reviews.get_reviews(movie.id)
 
     return render_template('movie.html',title = title,movie = movie) 
 
